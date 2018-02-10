@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\moderncvstyle{classic}                             % Only the 'classic' style is fully functional with the modifications made. The other options, 'casual' (default), 'oldstyle' and 'banking' has minor typesetting problems with the current modifications.
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{times}
+\usepackage[margin=1 cm,top = 1.75 cm, bottom = 2 cm, left=1.25cm, right = 1.25 cm ]{geometry}
+\usepackage{moderntimeline}
+\tlmaxdates{2010}{2019}
+\usepackage{xpatch}
+\usepackage[url=false,
+backend=bibtex,
+style=authoryear,
+doi=false,  
+isbn=false,
+backref=false,
+dashed=false,
+maxnames=99,
+natbib=true,
+sorting=ydnt]{biblatex}
+\DeclareNameAlias{author}{first-last}
+\addbibresource{cvreferences.bib}
+\renewcommand*{\bibfont}{\footnotesize }
+
+\input{standard_modification.tex}
+\newcommand{\cvreferencecolumn}[2]{%
+	\cvitem[0.75em]{}{%
+		\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+		\hfill%
+		\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+	}
+}
+
+\newcommand{\cvreference}[8]{%
+	\textbf{#1}\newline% Name
+	\ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+	\ifthenelse{\equal{#3}{}}{}{#3\newline}%
+	\ifthenelse{\equal{#4}{}}{}{#4\newline}%
+	\ifthenelse{\equal{#5}{}}{}{#5\newline}%
+	\ifthenelse{\equal{#6}{}}{}{~\texttt{{\nolinkurl{#6}}}\newline}%
+	\ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+	\ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
+
+\firstname{Anjali} 
+\familyname{Suman}
+\title{M.Sc. Statistics, Senior Year}
+\address{Hindu College}{University Of Delhi}
+\phone{+91-9717596462}
+\email{anjali.suman.stats@gmail.com}
+\homepage{https://github.com/anjalisuman}{}
+\extrainfo{}
+\photo[95pt][0pt]{pictures/du}
+%\quote{"A witty and playful quotation" - John Smith}
+\begin{document}
+\makecvtitle
+\section{\textbf{Areas of Interest}} 
+\cvitem{}{\textit{\textbf{Operation Research, Confirmatory Factor Analysis, Regression Analysis, Time Series Analysis, Survey Sampling}}}
+\section{\textbf{Education}}
+\tlcventry{2016}{0}{Master of Science in Statistics}{Hindu College, University of Delhi}{Delhi}{Senior Year}{}
+\tlcventry{2013}{2016}{Bachelor of Science in Statistics}{Ramanujan College, University of Delhi}{Delhi}{75\%}{}
+\tldatecventry{2013}{Twelfth}{Krishna Niketan (CBSE)}{Patna, Bihar}{\textit{80\%}}{}
+\tldatecventry{2011}{Tenth}{Krishna Niketan (CBSE)}{Patna, Bihar}{\textit{$9.2^{*}$}}{$^{*}$on a scale of 10}
+%\vspace{0.1cm}
+\section{\textbf{Skills}}
+%\vspace{0.05cm}
+\subsection{Computational Statistical Packages}
+\cvitem{}{R, SPSS, SAS, WinQSB}
+\subsection{Computer Languages}
+\cvitem{}{C++, C, MATLAB}
+\subsection{Microsoft Office Package}
+\cvitem{}{Word, Excel, Power Point}
+\subsection{Others}
+\cvitem{}{Octave, Ubuntu}
+
+\section{\textbf{Internship Experience}}
+\cvitem{June, 2017 - Present}{Cricnwin.com, Cheruniq Technology Pvt Ltd}
+\vspace{-0.55cm}
+\cvitem{}{Mentor: Mr. Vipul Agrawal}
+
+\section{\textbf{Project Involvements}}
+\tlcventry{2017}{0}{\large\textbf{Fantasy league score calculator}}{}{}{}{}
+\cvitem{Mentor}{Mr. Vipul Agrawal}
+\cvitem{}{\begin{itemize}
+		\item Determination of factors that affect the cricket's performance in a given match through confimatory factor analysis. 
+		\item Determination of the weights of the contributions made by these factors on the value added by the player to his/her team.
+		\item Prediction of the credit score of the individual players based on past records and the factors obtained through confirmatory factor analysis
+\end{itemize}}
+\tlcventry{2016}{2016}{\large\textbf{Quality Assessment of Academic Website Using Sampling Techniques}}{}{}{}{}
+\cvitem{Mentor}{Dr. Garima Priyadarshini}
+\cvitem{}{\begin{itemize}
+		\item A Variety of studies has been conducted on websites.
+		\item These studies are broadly based on heuristic analysis, surveys through questionnaires, interviews or web analysis tools (like Google analytics).
+		\item We made a hypothesis according to questionnaire and analyze them through responses using some sampling techniques
+\end{itemize}}
+\tlcventry{2014}{2016}{\large\textbf{Matchstick game}}{}{}{}{}
+\cvitem{}{\begin{itemize}
+		\item A game between a computer and an user such that the computer is always a winner.
+		\item Rules of game: (a) There are 21 matchsticks, (b) Player and computer can choose matchsticks alternatively, (c) At a chance they can pick less than 5 and greater than 0 matchsticks and (d) Whoever is forced to pick up the last matchstick loses the game.
+\end{itemize}}
+\section{\textbf{Professional Development}}
+\cvitem{Jan, 2015}{Indian Society of Agricultural Science: 68$^{th}$ Annual Conference.}
+\cvitem{2014}{IBM SPSS (Statistical Package for the Social Sciences) workshop.}
+\cvitem{2014}{INCOMECT (International Conference on Management Education \& Corporate Transformation)}
+\cvitem{2014}{Workshop on R-Language.}
+\cvitem{2014}{WinQSB for Operation Research workshop.}
+\cvitem{Oct, 2013}{International DU conference.}
+\cvitem{Sep, 2013}{Workshop on Ubuntu 12.04.}
+\section{Languages}
+\cvitemwithcomment{English}{Fluent}{Daily practice, all work performed in English}
+\cvitemwithcomment{Hindi}{Native}{Mother Tongue}
+
+\section{Extra-Curricular}
+\subsection{UGC Sponsored National Conference}
+\tlcventry{2016}{2016}{Organizer}{}{}{}{
+	\begin{itemize}%
+		\item Part of organizing team for a conference on Recent Statistical Computing Techniques and their applications.
+		\item Streamlined a procedure for uniform and timely registration of students with minimal rush. 
+\end{itemize}}
+
+\section{References}
+\cvreferencecolumn{\cvreference{Prof. Ajit Chaturvedi}{Associate Professor}{Department of Statistics}{University of Delhi}{Delhi}{ajitc2001@yahoo.co.in}{(+91)-112-766-6671}{}}{\cvreference{Mr. Vipul Agrawal}{Founder and CEO}{Cricnwin.com}{Cheruniq Technology Pvt Ltd}{Sector 47, Gurgoan}{vipul@cricnwin.com}{(+91)-9871-495-498}{}}
+
+\end{document}
